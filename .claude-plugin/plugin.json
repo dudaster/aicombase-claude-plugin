@@ -1,0 +1,16 @@
+{
+  "name": "aicombase",
+  "displayName": "AICOMBase",
+  "version": "1.0.0",
+  "description": "Let Claude work on your WordPress sites through AICOMBase — pages, posts, Elementor, WooCommerce, translations — with the permissions you choose, a session and Undo for every job, and your approval for risky actions.",
+  "author": { "name": "Dudaster", "url": "https://dudaster.com" },
+  "homepage": "https://aicombase.com/ai-agents",
+  "repository": "https://github.com/dudaster/aicombase-claude-plugin",
+  "license": "MIT",
+  "keywords": ["wordpress", "woocommerce", "elementor", "polylang", "website-management", "agency", "mcp"],
+  "icon": "./logo.png",
+  "documentationUrl": "https://aicombase.com/docs/ai/aicombase",
+  "supportUrl": "https://github.com/dudaster/aicom/issues",
+  "privacyPolicyUrl": "https://aicombase.com/privacy",
+  "termsOfServiceUrl": "https://aicombase.com/terms"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "aicombase": {
+      "type": "http",
+      "url": "https://aicombase.com/api/mcp"
+    }
+  }
+}

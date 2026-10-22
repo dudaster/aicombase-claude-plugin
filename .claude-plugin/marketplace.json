@@ -1,0 +1,15 @@
+{
+  "name": "aicombase",
+  "description": "AICOMBase for Claude — work on your WordPress sites safely, with the access you choose.",
+  "owner": {
+    "name": "Dudaster",
+    "url": "https://dudaster.com"
+  },
+  "plugins": [
+    {
+      "name": "aicombase",
+      "source": "./",
+      "description": "Let Claude work on your WordPress sites through AICOMBase, safely."
+    }
+  ]
+}

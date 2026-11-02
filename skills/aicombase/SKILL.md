@@ -15,9 +15,9 @@ AICOMBase connects the user's WordPress sites (each runs the free AICOM plugin).
 ## How to do a job
 
 1. **Find the site.** Use `sites.list`. If the user didn't say which site, or several match, ask — never guess a site.
-2. **See what the site offers.** `capabilities.list` shows the tools you may use there and their arguments — it needs no session (in Tool Assist mode, describe the job to `tools.suggest` instead). If nothing there fits the job, don't open a session: tell the user what's missing; they can widen the access in AICOMBase → Keys. (In MCPAssist mode, skip this step and just say the job to `mcpassist` once the session is open.)
+2. **See what you can do there.** When you signed in, each WordPress action your access allows is its own tool (Direct tools) — `wp.posts.create`, `wp.posts.update`, `wp.menus.items.add` … — each taking the site's `site_id`. With a key in another mode: `capabilities.list` shows the tools (Full tool list), `tools.suggest` proposes one (Tool Assist), and in MCPAssist you just say the job to `mcpassist` once the session is open. If nothing fits the job, don't open a session: tell the user what's missing; they can widen the access in AICOMBase → Keys.
 3. **Open one session per job.** `session.open` with the site, a short name after the job ("Create Contact page") and one line saying what the user asked for, as a fact ("The owner asked for a Contact page with the address and phone.") — not a plan or steps. Without an open session every change is refused.
-4. **Do the work** with `tasks.create`, one action at a time, and check each result with `tasks.get`.
+4. **Do the work** one action at a time. Direct tools answer with their result (`running` → check later with `tasks.get`); in the other modes run the tool with `tasks.create` and check it with `tasks.get`.
 5. **Read back what you changed** — the page, the post, the price — and give the user the link (for drafts, the preview link).
 6. **Close the session** with `session.close`: the outcome and a one-line summary of what you did.
 
@@ -35,4 +35,4 @@ AICOMBase connects the user's WordPress sites (each runs the free AICOM plugin).
 - "What did the site checks find on example.com?" — `findings.list`, then `findings.get` for one.
 - "Is anything down?" — `incidents.list`.
 - "What's new?" — `notifications.list`.
-- "What did people ask you to do?" — `tasks.pending` lists tasks the user wrote in AICOMBase for you; `tasks.resolve` does one.
+- "What did people ask you to do?" — with a Full tool list or Tool Assist key, `tasks.pending` lists tasks the user wrote in AICOMBase for you; `tasks.resolve` does one.

@@ -1,7 +1,7 @@
 {
   "name": "aicombase",
   "displayName": "AICOMBase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Let Claude work on your WordPress sites through AICOMBase — pages, posts, Elementor, WooCommerce, translations — with the permissions you choose, a session and Undo for every job, and your approval for risky actions.",
   "author": { "name": "Dudaster", "url": "https://dudaster.com" },
   "homepage": "https://aicombase.com/ai-agents",

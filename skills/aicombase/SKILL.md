@@ -15,8 +15,8 @@ AICOMBase connects the user's WordPress sites (each runs the free AICOM plugin).
 ## How to do a job
 
 1. **Find the site.** Use `sites.list`. If the user didn't say which site, or several match, ask — never guess a site.
-2. **Open one session per job.** `session.open` with the site, a short name after the job ("Create Contact page") and a one-line description of what you'll do and why. Without an open session every change is refused.
-3. **See what the site offers.** `capabilities.list` shows the tools you may use there and their arguments (in Tool Assist mode, describe the job to `tools.suggest` instead; in MCPAssist mode, just say it to `mcpassist`).
+2. **See what the site offers.** `capabilities.list` shows the tools you may use there and their arguments — it needs no session (in Tool Assist mode, describe the job to `tools.suggest` instead). If nothing there fits the job, don't open a session: tell the user what's missing; they can widen the access in AICOMBase → Keys. (In MCPAssist mode, skip this step and just say the job to `mcpassist` once the session is open.)
+3. **Open one session per job.** `session.open` with the site, a short name after the job ("Create Contact page") and one line saying what the user asked for, as a fact ("The owner asked for a Contact page with the address and phone.") — not a plan or steps. Without an open session every change is refused.
 4. **Do the work** with `tasks.create`, one action at a time, and check each result with `tasks.get`.
 5. **Read back what you changed** — the page, the post, the price — and give the user the link (for drafts, the preview link).
 6. **Close the session** with `session.close`: the outcome and a one-line summary of what you did.
